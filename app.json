@@ -4,12 +4,12 @@
     "slug": "trabalho-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": ""
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +19,17 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "",
+        "backgroundColor": ""
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
+      "favicon": ""
+    },
+    "assets": [
+      "./assets/fonts/Open_Sans/static"
+    ],
+    "sdkVersion": "50.0.0"
+  },
+  "name": "trabalho-mobile"
 }
