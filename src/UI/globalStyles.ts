@@ -9,7 +9,9 @@ export const globalStyles = StyleSheet.create({
 
   topBar: {
     backgroundColor: "#222222",
-    ...paddingConstructor(16, 0),
+    display: "flex",
+    alignItems: "flex-start",
+    ...paddingConstructor(8, 8),
   },
 
   navBar: {
@@ -18,5 +20,9 @@ export const globalStyles = StyleSheet.create({
     bottom: 0,
     position: "absolute",
     width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
 });

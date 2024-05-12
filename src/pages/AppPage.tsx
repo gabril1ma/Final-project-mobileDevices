@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import AppBackground from "../components/atoms/AppBackground";
 
-const ExamplePage = () => {
+const AppPage = () => {
   return (
     <AppBackground>
       <Text>TEXTO DE EXEMPLO</Text>
@@ -10,4 +10,4 @@ const ExamplePage = () => {
   );
 };
 
-export default ExamplePage;
+export default AppPage;
