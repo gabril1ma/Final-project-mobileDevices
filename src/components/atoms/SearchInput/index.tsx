@@ -1,6 +1,6 @@
 import React from "react";
-import { View } from "react-native";
-import SearchIcon from "../../assets/SearchIcon";
+import { View, Text } from "react-native";
+import SearchIcon from "../../../assets/SearchIcon";
 import { styles } from "./styles";
 
 const SearchInput = () => {
@@ -14,6 +14,9 @@ const SearchInput = () => {
           placeholder="Pesquisar..."
         />
       </label>
+      <Text className="font-bold">
+        fununciona
+      </Text>
       <SearchIcon fill="#454B66" />
     </View>
   );
