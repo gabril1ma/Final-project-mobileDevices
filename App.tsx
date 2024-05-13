@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, SafeAreaView } from "react-native";
+import { Image, SafeAreaView, View } from "react-native";
 import { globalStyles } from "./src/UI/globalStyles";
 import ArrowBackCircle from "./src/assets/ArrowBackCircle";
 import HomeIcon from "./src/assets/HomeIcon";
@@ -23,7 +23,9 @@ export default function App() {
         />
       </AppBar>
 
-      <AppPage />
+      <View style={globalStyles.pagesContainer}>
+        <AppPage />
+      </View>
 
       <AppBar style={globalStyles.navBar}>
         <HomeIcon />

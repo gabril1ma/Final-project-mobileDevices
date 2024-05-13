@@ -4,6 +4,10 @@ import { paddingConstructor } from "../shared/utils/padding";
 export const globalStyles = StyleSheet.create({
   container: {
     height: "100%",
+    backgroundColor: "#f9f9f9",
+  },
+
+  pagesContainer: {
     flex: 1,
   },
 
@@ -11,14 +15,15 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: "#222222",
     display: "flex",
     alignItems: "flex-start",
+    flex: 1,
+    maxHeight: 60,
     ...paddingConstructor(8, 8),
   },
 
   navBar: {
     backgroundColor: "#222222",
-    ...paddingConstructor(16, 0),
-    bottom: 0,
-    position: "absolute",
+    flex: 1,
+    maxHeight: 50,
     width: "100%",
     display: "flex",
     flexDirection: "row",
