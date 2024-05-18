@@ -14,9 +14,6 @@ const SearchInput = () => {
           placeholder="Pesquisar..."
         />
       </label>
-      <Text className="font-bold">
-        fununciona
-      </Text>
       <SearchIcon fill="#454B66" />
     </View>
   );
