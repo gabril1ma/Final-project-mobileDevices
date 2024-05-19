@@ -4,7 +4,7 @@ import SearchInput from "../../components/atoms/SearchInput";
 import AppBackground from "../../components/atoms/AppBackground";
 import ButtonCustom from "../../components/atoms/ButtonCustom";
 import { styles } from "./styles";
-import CheckboxWithLabel from "../../assets/CheckBox";
+import CheckboxWithLabel from "../../components/atoms/CheckBox/CheckBox";
 
 const AppPage = () => {
   return (
@@ -20,7 +20,7 @@ const AppPage = () => {
       </View>
       <View ></View>
       <SearchInput />
-
+      
       
       <ButtonCustom
           onPress={() => {}}
