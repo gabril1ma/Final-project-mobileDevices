@@ -1,36 +1,34 @@
-import React, {useState} from "react";
+import React from "react";
 import { Text, View } from "react-native";
-import SearchInput from "../../components/atoms/SearchInput";
 import AppBackground from "../../components/atoms/AppBackground";
 import ButtonCustom from "../../components/atoms/ButtonCustom";
+import SearchInput from "../../components/atoms/SearchInput";
+import BroadcastersList from "../../components/molecules/BroadcastersList";
 import { styles } from "./styles";
-import CheckboxWithLabel from "../../components/atoms/CheckBox/CheckBox";
 
 const AppPage = () => {
   return (
-
     <>
-    <AppBackground style={styles.container}>
-      <View style={styles.innerPadding}>
-        <Text style={styles.title}>
-          Selecione os principais véiculos de informação que você deseja
-          acompanhar
-        </Text>
+      <AppBackground style={styles.container}>
+        <View style={styles.innerPadding}>
+          <Text style={styles.title}>
+            Selecione os principais véiculos de informação que você deseja
+            acompanhar
+          </Text>
+        </View>
 
-      </View>
-      <View ></View>
-      <SearchInput />
-      
-      
-      <ButtonCustom
-          onPress={() => {}}
+        <SearchInput />
+
+        <ButtonCustom
+          onPress={() => null}
           title="Pesquisar"
           variant="primary"
-         />
-    </AppBackground>
+        />
+
+        <BroadcastersList />
+      </AppBackground>
     </>
   );
 };
-
 
 export default AppPage;

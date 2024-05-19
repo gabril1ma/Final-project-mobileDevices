@@ -1,35 +1,35 @@
-import React from 'react';
+import Checkbox from "expo-checkbox";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-const CheckboxWithLabel = ({ id, label, checked, onChange }) => {
+export const CheckBox = ({ onValueChange, isChecked, label }) => {
   return (
-    <div style={styles.container}>
-      
-      <input
-        type="checkbox"
-        id={id}
-        checked={checked}
-        onChange={onChange}
-        style={styles.checkbox}
-      />
-      <label htmlFor={id} style={styles.label}>
-        {label}
-      </label>
-    </div>
+    <Text onPress={onValueChange}>
+      <View style={styles.section}>
+        <Checkbox
+          style={styles.checkbox}
+          value={isChecked}
+          onValueChange={onValueChange}
+          color={isChecked ? "#3762EA" : "#DFE4EA"}
+        />
+        <Text style={styles.paragraph}>{label}</Text>
+      </View>
+    </Text>
   );
 };
 
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: 8,
+const styles = StyleSheet.create({
+  section: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  paragraph: {
+    fontSize: 15,
+    width: "100%",
   },
   checkbox: {
-    marginRight: 8,
+    margin: 12,
+    width: 20,
+    height: 20,
   },
-  label: {
-    fontSize: 16,
-  },
-};
-
-export default CheckboxWithLabel;
+});

@@ -1,13 +1,41 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import NewsItem from '../NewsItems/newsItems';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import NewsItem from "../NewsItems/newsItems";
 
-const NewsList = ({ news }) => {
+const mockedNews = [
+  {
+    title: "News Title 1",
+    imageUrl: "https://via.placeholder.com/50",
+  },
+  {
+    title: "News Title 2",
+    imageUrl: "https://via.placeholder.com/50",
+  },
+  {
+    title: "News Title 3",
+    imageUrl: "https://via.placeholder.com/50",
+  },
+];
+
+const NewsList = () => {
+  const [checkboxState, setCheckboxState] = React.useState({
+    checkbox1: false,
+    checkbox2: false,
+  });
+
+  const handleCheckboxChange = (event) => {
+    const { id, checked } = event.target;
+    setCheckboxState((prevState) => ({
+      ...prevState,
+      [id]: checked,
+    }));
+  };
+
   return (
     <View style={styles.container}>
-      {news.map((item, index) => (
+      {mockedNews?.map((item) => (
         <NewsItem
-          key={index}
+          key={item.title}
           title={item.title}
           imageUrl={item.imageUrl}
         />
