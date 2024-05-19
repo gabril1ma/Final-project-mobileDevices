@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
 import AppBackground from "../../components/atoms/AppBackground";
-import ButtonCustom from "../../components/atoms/ButtonCustom";
 import SearchInput from "../../components/atoms/SearchInput";
 import BroadcastersList from "../../components/molecules/BroadcastersList";
 import { styles } from "./styles";
@@ -18,12 +17,6 @@ const AppPage = () => {
         </View>
 
         <SearchInput />
-
-        <ButtonCustom
-          onPress={() => null}
-          title="Pesquisar"
-          variant="primary"
-        />
 
         <BroadcastersList />
       </AppBackground>
