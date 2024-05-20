@@ -22,10 +22,12 @@ const styles = StyleSheet.create({
   section: {
     flexDirection: "row",
     alignItems: "center",
+    borderBottomColor: "#DFE4EA",
+    borderBottomWidth: 1,
+    width: "100%",
   },
   paragraph: {
     fontSize: 15,
-    width: "100%",
   },
   checkbox: {
     margin: 12,
