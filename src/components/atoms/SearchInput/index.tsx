@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import SearchIcon from "../../assets/SearchIcon";
 import { styles } from "./styles";
+import SearchIcon from "../../../assets/SearchIcon";
 
 const SearchInput = () => {
   return (
