@@ -1,12 +1,8 @@
 import React from "react";
 import { View } from "react-native";
-<<<<<<< HEAD
-=======
 import SearchIcon from "../../../assets/SearchIcon";
 import useAppContext from "../../../hooks/useAppContext";
->>>>>>> 42f25dce1b2693b4932e823ccfa133fb6084eff1
 import { styles } from "./styles";
-import SearchIcon from "../../../assets/SearchIcon";
 
 const SearchInput = () => {
   const {
