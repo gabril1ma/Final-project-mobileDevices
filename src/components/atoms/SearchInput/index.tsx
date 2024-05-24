@@ -15,12 +15,10 @@ const SearchInput = () => {
     <View
       style={{
         ...styles.container,
-        borderBottomColor: shouldDisableSearchBar ? "#DFE4EA" : "#A31621",
       }}
     >
       <label htmlFor="search-news-input" style={styles.searchInputLabel}>
         <input
-          disabled={!shouldDisableSearchBar}
           type="text"
           name="search-news-input"
           style={{ ...styles.searchInput, outlineColor: "transparent" }}
