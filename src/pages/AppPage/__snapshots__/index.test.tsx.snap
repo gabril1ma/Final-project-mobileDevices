@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppPage /> should render component 1`] = `
+<View
+  style={
+    {
+      "paddingBottom": 0,
+      "paddingLeft": 16,
+      "paddingRight": 16,
+      "paddingTop": 0,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#FFFFFF",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#18224C",
+            "fontSize": 15,
+            "fontWeight": "500",
+            "marginBottom": 48,
+            "maxWidth": "70%",
+          }
+        }
+      >
+        Selecione os principais véiculos de informação que você deseja acompanhar
+      </Text>
+      <View
+        style={
+          {
+            "borderBottomWidth": 1,
+            "display": "flex",
+            "flexDirection": "row",
+            "paddingBottom": 4,
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          htmlFor="search-news-input"
+          style={
+            {
+              "width": "100%",
+            }
+          }
+        >
+          <input
+            name="search-news-input"
+            placeholder="Pesquisar..."
+            style={
+              {
+                "borderColor": "transparent",
+                "outlineColor": "transparent",
+                "width": "100%",
+              }
+            }
+            type="text"
+          />
+        </label>
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.4082 19.7546L16.9977 15.3441C18.0596 13.9306 18.6328 12.2099 18.6308 10.442C18.6308 5.92602 14.9568 2.25195 10.4408 2.25195C5.9249 2.25195 2.25084 5.92602 2.25084 10.442C2.25084 14.9579 5.9249 18.632 10.4408 18.632C12.2088 18.6339 13.9294 18.0607 15.343 16.9988L19.7535 21.4093C19.9768 21.6089 20.2679 21.7154 20.5673 21.707C20.8666 21.6986 21.1514 21.576 21.3631 21.3642C21.5749 21.1525 21.6975 20.8677 21.7059 20.5684C21.7143 20.2691 21.6078 19.9779 21.4082 19.7546ZM4.59084 10.442C4.59084 9.28493 4.93394 8.15389 5.57674 7.19187C6.21955 6.22984 7.13319 5.48003 8.20214 5.03726C9.27109 4.59449 10.4473 4.47864 11.5821 4.70436C12.7169 4.93008 13.7593 5.48724 14.5774 6.30538C15.3955 7.12351 15.9527 8.16588 16.1784 9.30067C16.4042 10.4355 16.2883 11.6117 15.8455 12.6806C15.4028 13.7496 14.653 14.6632 13.6909 15.306C12.7289 15.9489 11.5979 16.292 10.4408 16.292C8.88989 16.2901 7.403 15.6732 6.30632 14.5765C5.20963 13.4798 4.5927 11.9929 4.59084 10.442Z"
+            fill="#454B66"
+          />
+        </svg>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 16,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#DFE4EA",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": true,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "borderColor": "#657786",
+                  "borderRadius": 2,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "width": 20,
+                },
+                {
+                  "height": 20,
+                  "margin": 12,
+                  "width": 20,
+                },
+                {
+                  "backgroundColor": "#007AFF",
+                  "borderColor": "#007AFF",
+                },
+                {
+                  "backgroundColor": "#3762EA",
+                  "borderColor": "#3762EA",
+                },
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            <Image
+              source={
+                {
+                  "uri": "data:image/png;base64,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",
+                }
+              }
+              style={
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              {
+                "fontSize": 15,
+              }
+            }
+          >
+            CNN Brasil
+          </Text>
+        </View>
+      </Text>
+      <Text
+        onPress={[Function]}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#DFE4EA",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": true,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "borderColor": "#657786",
+                  "borderRadius": 2,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "width": 20,
+                },
+                {
+                  "height": 20,
+                  "margin": 12,
+                  "width": 20,
+                },
+                {
+                  "backgroundColor": "#007AFF",
+                  "borderColor": "#007AFF",
+                },
+                {
+                  "backgroundColor": "#3762EA",
+                  "borderColor": "#3762EA",
+                },
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            <Image
+              source={
+                {
+                  "uri": "data:image/png;base64,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",
+                }
+              }
+              style={
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              {
+                "fontSize": 15,
+              }
+            }
+          >
+            Folha de São Paulo
+          </Text>
+        </View>
+      </Text>
+      <Text
+        onPress={[Function]}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderBottomColor": "#DFE4EA",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": true,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "borderColor": "#657786",
+                  "borderRadius": 2,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "width": 20,
+                },
+                {
+                  "height": 20,
+                  "margin": 12,
+                  "width": 20,
+                },
+                {
+                  "backgroundColor": "#007AFF",
+                  "borderColor": "#007AFF",
+                },
+                {
+                  "backgroundColor": "#3762EA",
+                  "borderColor": "#3762EA",
+                },
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            <Image
+              source={
+                {
+                  "uri": "data:image/png;base64,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",
+                }
+              }
+              style={
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              {
+                "fontSize": 15,
+              }
+            }
+          >
+            Estado de Minas
+          </Text>
+        </View>
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#18224C",
+            "fontSize": 15,
+            "fontWeight": "500",
+            "marginBottom": 8,
+          }
+        }
+      >
+        Coloque em ordem crescente qual veiculo de noticia você prefere:
+      </Text>
+      <View
+        style={
+          {
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "gap": 4,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "backgroundColor": "#DFE4EA",
+              "color": "#18224C",
+              "fontFamily": " -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+              "fontSize": 13,
+              "fontWeight": "400",
+              "opacity": 1,
+              "padding": 16,
+            }
+          }
+        >
+          CNN Brasil
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "backgroundColor": "#DFE4EA",
+              "color": "#18224C",
+              "fontFamily": " -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+              "fontSize": 13,
+              "fontWeight": "400",
+              "opacity": 1,
+              "padding": 16,
+            }
+          }
+        >
+          Folha de São Paulo
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "backgroundColor": "#DFE4EA",
+              "color": "#18224C",
+              "fontFamily": " -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+              "fontSize": 13,
+              "fontWeight": "400",
+              "opacity": 1,
+              "padding": 16,
+            }
+          }
+        >
+          Estado de Minas
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

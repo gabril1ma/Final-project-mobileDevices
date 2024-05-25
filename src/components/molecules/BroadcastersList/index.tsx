@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import useAppContext from "../../../hooks/useAppContext";
-import { CheckBox } from "../../atoms/CheckBox/CheckBox";
+import CheckBox from "../../atoms/CheckBox/CheckBox";
 
 const BroadcastersList = () => {
   const {
@@ -21,10 +21,11 @@ const BroadcastersList = () => {
 
   return (
     <View style={styles.container}>
-      {broadcasters.map((b, index) => (
+      {broadcasters?.map((b, index) => (
         <CheckBox
-          label={b.name}
-          isChecked={b.selected}
+          key={b?.name}
+          label={b?.name}
+          isChecked={b?.selected}
           onValueChange={() => handleCheckBoadcaster(index)}
         />
       ))}
