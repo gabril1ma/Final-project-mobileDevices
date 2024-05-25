@@ -6,6 +6,9 @@ export const AppContext = createContext({} as IAppContext);
 
 const initialAppState = {
   broadcasters: broadcastersDataMock,
+  searchInputValue: "",
+  news: [],
+  isLoading: false,
 };
 
 export const AppContextProvider = ({ children }) => {

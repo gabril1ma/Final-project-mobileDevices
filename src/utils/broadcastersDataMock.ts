@@ -4,31 +4,26 @@ export const broadcastersDataMock: IBroadcasters[] = [
   {
     name: "CNN Brasil",
     selected: false,
-    urlAPI: "",
+    urlAPI: "www.cnnbrasil.com.br",
   },
   {
     name: "Folha de São Paulo",
     selected: false,
-    urlAPI: "",
+    urlAPI: "www.folha.uol.com.br",
   },
   {
     name: "Estado de Minas",
     selected: false,
-    urlAPI: "",
+    urlAPI: "www.em.com.br",
   },
   {
     name: "Veja",
     selected: false,
-    urlAPI: "",
+    urlAPI: "veja.abril.com.br",
   },
   {
     name: "Globo news",
     selected: false,
-    urlAPI: "",
-  },
-  {
-    name: "G1",
-    selected: false,
-    urlAPI: "",
+    urlAPI: "g1.globo.com",
   },
 ];
