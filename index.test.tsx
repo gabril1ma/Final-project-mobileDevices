@@ -1,15 +1,42 @@
 import { create, ReactTestRendererJSON } from "react-test-renderer";
-import AppBackground from ".";
+import App from "./App";
 
 export type TTreeRenderer = ReactTestRendererJSON | ReactTestRendererJSON[];
 
-describe("<AppBackground />", () => {
+const broadcasterMock = [
+  {
+    name: "CNN Brasil",
+    selected: true,
+    urlAPI: "",
+  },
+  {
+    name: "Folha de São Paulo",
+    selected: true,
+    urlAPI: "",
+  },
+  {
+    name: "Estado de Minas",
+    selected: true,
+    urlAPI: "",
+  },
+];
+
+jest.mock("./src/hooks/useAppContext", () => ({
+  __esModule: true,
+  default: () => ({
+    appState: {
+      broadcasters: broadcasterMock,
+    },
+    setAppState: () => jest.fn(),
+  }),
+}));
+
+describe("<App />", () => {
   let tree: TTreeRenderer;
   let testTree: ReactTestRendererJSON;
 
   beforeEach(() => {
-    tree = create(<AppBackground />).toJSON();
-
+    tree = create(<App />).toJSON();
     testTree = tree[0] ?? tree;
   });
 
@@ -18,6 +45,6 @@ describe("<AppBackground />", () => {
   });
 
   it("should have one children", () => {
-    expect(testTree?.children?.length).toBe(1);
+    expect(testTree?.children?.length).toBe(3);
   });
 });
