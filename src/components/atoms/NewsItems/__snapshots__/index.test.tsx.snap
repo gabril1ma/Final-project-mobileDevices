@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsItem /> should render component 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "borderBottomColor": "#ccc",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "padding": 10,
+    }
+  }
+>
+  <Image
+    source={
+      {
+        "uri": "Jest test",
+      }
+    }
+    style={
+      {
+        "borderRadius": 25,
+        "height": 50,
+        "marginRight": 10,
+        "width": 50,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Jest test
+  </Text>
+</View>
+`;

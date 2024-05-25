@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsList /> should render component 1`] = `
+<View
+  style={
+    {
+      "padding": 10,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#ccc",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "https://via.placeholder.com/50",
+        }
+      }
+      style={
+        {
+          "borderRadius": 25,
+          "height": 50,
+          "marginRight": 10,
+          "width": 50,
+        }
+      }
+    />
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      News Title 1
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#ccc",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "https://via.placeholder.com/50",
+        }
+      }
+      style={
+        {
+          "borderRadius": 25,
+          "height": 50,
+          "marginRight": 10,
+          "width": 50,
+        }
+      }
+    />
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      News Title 2
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#ccc",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "uri": "https://via.placeholder.com/50",
+        }
+      }
+      style={
+        {
+          "borderRadius": 25,
+          "height": 50,
+          "marginRight": 10,
+          "width": 50,
+        }
+      }
+    />
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      News Title 3
+    </Text>
+  </View>
+</View>
+`;

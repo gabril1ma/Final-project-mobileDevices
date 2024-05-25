@@ -2,7 +2,7 @@ import Checkbox from "expo-checkbox";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export const CheckBox = ({ onValueChange, isChecked, label }) => {
+const CheckBox = ({ onValueChange, isChecked, label }) => {
   return (
     <Text onPress={onValueChange}>
       <View style={styles.section}>
@@ -35,3 +35,5 @@ const styles = StyleSheet.create({
     height: 20,
   },
 });
+
+export default CheckBox;

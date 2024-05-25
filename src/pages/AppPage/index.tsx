@@ -14,9 +14,9 @@ const AppPage = () => {
           Selecione os principais véiculos de informação que você deseja
           acompanhar
         </Text>
-      </View>
 
-      <SearchInput />
+        <SearchInput />
+      </View>
 
       <BroadcastersList />
 
