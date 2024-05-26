@@ -4,7 +4,7 @@ import NewsDTO from "../DTO/NewsDTO";
 import { IGoogleNewResponse } from "../types";
 import useAppContext from "./useAppContext";
 
-const getCNNQuery = (value: string, domainsToInclude: string) =>
+const getQuery = (value: string, domainsToInclude: string) =>
   `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=a6fab64d720fc42f9&q=${value}&siteSearch=${domainsToInclude}&siteSearchFilter=i`;
 
 const useAppService = () => {
@@ -20,7 +20,7 @@ const useAppService = () => {
     []
   );
 
-  const fetchCNNNews = useCallback(
+  const fetchNews = useCallback(
     async (searchValue: string) => {
       try {
         const { data } = await axios.get(searchValue);
@@ -38,10 +38,10 @@ const useAppService = () => {
   );
 
   const dispatchfetchNews = useCallback(async () => {
-    await fetchCNNNews(
-      getCNNQuery(appState.searchInputValue, domainsToInclude ?? "")
+    await fetchNews(
+      getQuery(appState.searchInputValue, domainsToInclude ?? "")
     );
-  }, [appState?.searchInputValue, fetchCNNNews]);
+  }, [appState?.searchInputValue, fetchNews]);
 
   const dispatchSearchNews = useCallback(async () => {
     try {
