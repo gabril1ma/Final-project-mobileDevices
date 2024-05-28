@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const NewsItem = ({ title, imageUrl }) => {
+const NewsItem = ({ title, imageUrl, date }) => {
   return (
     <View style={styles.container}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>Data: {date}</Text>
+      <Text style={styles.title}> {title}</Text>
+
     </View>
   );
 };

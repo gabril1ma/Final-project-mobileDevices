@@ -20,6 +20,9 @@ export interface INews {
   htmlTitle: string;
   link: string;
   title: string;
+  image: string;
+  snippet: string;
+  date: string;
 }
 
 export interface IGoogleNewResponse {

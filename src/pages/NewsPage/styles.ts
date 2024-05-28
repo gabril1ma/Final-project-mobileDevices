@@ -15,9 +15,4 @@ export const styles = StyleSheet.create({
     maxWidth: "70%",
     marginBottom: 48,
   },
-  image: {
-    width: 50,
-    height: 50,
-    // Adicione outros estilos conforme necessário
-  },
 });
