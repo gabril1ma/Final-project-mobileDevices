@@ -1,37 +1,36 @@
+// src/components/atoms/SearchInput.js
 import React from "react";
-import { Text, View } from "react-native";
+import { View, TextInput, TouchableOpacity } from "react-native";
 import SearchIcon from "../../../assets/SearchIcon";
 import useAppContext from "../../../hooks/useAppContext";
 import useAppService from "../../../hooks/useAppService";
 import { styles } from "./styles";
 
-const SearchInput = () => {
+const SearchInput = ({ onSearchCompleted }) => {
   const { setAppState, appState } = useAppContext();
-
   const { dispatchSearchNews } = useAppService();
 
-  const handleChangeInputValue = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setAppState((prev) => ({ ...prev, searchInputValue: e.target.value }));
+  const handleChangeInputValue = (e) =>
+    setAppState((prev) => ({ ...prev, searchInputValue: e.nativeEvent.text }));
+
+  const handleSearch = async () => {
+    const news = await dispatchSearchNews();
+    if (onSearchCompleted) {
+      onSearchCompleted(news);
+    }
+  };
 
   return (
-    <View
-      style={{
-        ...styles.container,
-      }}
-    >
-      <label htmlFor="search-news-input" style={styles.searchInputLabel}>
-        <input
-          type="text"
-          name="search-news-input"
-          style={{ ...styles.searchInput, outlineColor: "transparent" }}
-          placeholder="Pesquisar..."
-          onChange={handleChangeInputValue}
-          value={appState?.searchInputValue}
-        />
-      </label>
-      <Text onPress={dispatchSearchNews}>
+    <View style={styles.container}>
+      <TextInput
+        style={styles.searchInput}
+        placeholder="Pesquisar..."
+        onChange={handleChangeInputValue}
+        value={appState?.searchInputValue}
+      />
+      <TouchableOpacity onPress={handleSearch}>
         <SearchIcon fill="#454B66" />
-      </Text>
+      </TouchableOpacity>
     </View>
   );
 };

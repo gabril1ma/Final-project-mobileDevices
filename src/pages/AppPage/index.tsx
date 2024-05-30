@@ -7,9 +7,16 @@ import SelectedBroadcasterDragAndDrop from "../../components/molecules/SelectedB
 import useAppContext from "../../hooks/useAppContext";
 import { styles } from "./styles";
 import NewsList from "../../components/atoms/NewsList/NewsList";
+import { useNavigation } from '@react-navigation/native';
 
 const AppPage = () => {
   const { appState } = useAppContext();
+  const navigation = useNavigation();
+
+  const handleSearch = (news) => {
+    navigation.navigate('Results', { news });
+  };
+
 
   return (
     <AppBackground style={styles.container}>
@@ -19,16 +26,12 @@ const AppPage = () => {
           acompanhar
         </Text>
 
-        <SearchInput />
+        <SearchInput onSearchCompleted={handleSearch} />
       </View>
 
       <BroadcastersList />
       
-      {appState.isLoading ? (
-        <Text>Loading...</Text>
-      ) : (
-        <NewsList news={appState.news} />
-      )}
+      
 
       
 
