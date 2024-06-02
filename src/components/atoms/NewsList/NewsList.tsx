@@ -8,11 +8,13 @@ const NewsList = ({ news }) => {
       {news?.map((item) => (
         <NewsItem
           key={item.title}
+          broadcaster = {item.broadcaster}
           title={item.title}
           imageUrl={item.image}
           date={item.date}
           link={item.link}
           ogTitle={item.ogTitle}
+          broadcasterImages={item.broadcasterImages}
         />
       ))}
     </View>
@@ -22,7 +24,7 @@ const NewsList = ({ news }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    width: "40%",
+    width: "60%",
   },
 });
 

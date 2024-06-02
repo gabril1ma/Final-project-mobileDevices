@@ -5,6 +5,7 @@ export default class NewsDTO implements INews {
   link: string;
   title: string;
   broadcaster: string;
+  broadcasterImage: string;
   image: string;
   snippet: string;
   date: string;
@@ -15,6 +16,7 @@ export default class NewsDTO implements INews {
     this.link = googleNew.link;
     this.title = googleNew.title;
     this.broadcaster = googleNew.pagemap.metatags[0]["og:site_name"];
+    this.broadcasterImage = googleNew.pagemap.metatags[0]["og:image"];
     this.image = googleNew.pagemap.cse_image[0].src;
     this.date = googleNew.pagemap.metatags[0]["article:published_time"];
     this.ogTitle = googleNew.pagemap.metatags[0]["og:title"];

@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 
-const NewsItem = ({ title, imageUrl, date, link, ogTitle }) => {
+const NewsItem = ({ title, imageUrl, date, link, ogTitle, broadcaster, broadcasterImages }) => {
   const handlePress = () => {
     Linking.openURL(link);
   };
 
   return (
+    <View>
+      <Image source={{ uri: broadcasterImages }} style={styles.image} />
+      <Text>{broadcaster}</Text>
     <TouchableOpacity onPress={handlePress} style={styles.container}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
       <View>
@@ -14,6 +17,7 @@ const NewsItem = ({ title, imageUrl, date, link, ogTitle }) => {
         <Text style={styles.date}>{date}</Text>
       </View>
     </TouchableOpacity>
+    </View>
   );
 };
 
@@ -22,8 +26,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderWidth: 1,
+    borderColor: '#ccc',
   },
   image: {
     width: 50,
