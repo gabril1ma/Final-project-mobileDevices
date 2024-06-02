@@ -10,10 +10,14 @@ const getQuery = (value: string, domainsToInclude: string) =>
 const useAppService = () => {
   const { appState, setAppState } = useAppContext();
 
-  const domainsToInclude = appState?.broadcasters
-    .filter((broad) => broad?.selected)
-    .map((i) => i.urlAPI)
-    .toString();
+  const getDomainsToInclude = useCallback(
+    () =>
+      appState?.broadcasters
+        .filter((broad) => broad?.selected)
+        .map((i) => i.urlAPI)
+        .toString(),
+    [appState?.broadcasters]
+  );
 
   const clearState = useCallback(
     () => setAppState((prev) => ({ ...prev, searchInputValue: "" })),
@@ -39,9 +43,9 @@ const useAppService = () => {
 
   const dispatchfetchNews = useCallback(async () => {
     await fetchNews(
-      getQuery(appState.searchInputValue, domainsToInclude ?? "")
+      getQuery(appState.searchInputValue, getDomainsToInclude() ?? "")
     );
-  }, [appState?.searchInputValue, fetchNews]);
+  }, [appState?.searchInputValue, fetchNews, getDomainsToInclude]);
 
   const dispatchSearchNews = useCallback(async () => {
     try {
