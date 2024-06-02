@@ -11,6 +11,8 @@ const NewsList = ({ news }) => {
           title={item.title}
           imageUrl={item.image}
           date={item.date}
+          link={item.link}
+          ogTitle={item.ogTitle}
         />
       ))}
     </View>
@@ -20,6 +22,7 @@ const NewsList = ({ news }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    width: "40%",
   },
 });
 

@@ -8,7 +8,7 @@ const ResultsPage = () => {
   const { appState } = useAppContext();
 
   return (
-    <View style={{ flex: 1, padding: 10 }}>
+    <View style={{ flex: 1, padding: 20 }}>
       <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 10 }}>
         Resultados da Pesquisa
       </Text>

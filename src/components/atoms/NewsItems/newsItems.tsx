@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 
-const NewsItem = ({ title, imageUrl, date }) => {
+const NewsItem = ({ title, imageUrl, date, link, ogTitle }) => {
+  const handlePress = () => {
+    Linking.openURL(link);
+  };
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={handlePress} style={styles.container}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
-      <Text style={styles.title}>Data: {date}</Text>
-      <Text style={styles.title}> {title}</Text>
-
-    </View>
+      <View>
+        <Text style={styles.title}>{ogTitle}</Text>
+        <Text style={styles.date}>{date}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -29,6 +34,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  date: {
+    fontSize: 12,
+    color: '#555',
   },
 });
 
