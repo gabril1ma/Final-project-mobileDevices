@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 import NewsItem from "../NewsItems/newsItems";
 
 const NewsList = ({ news }) => {
@@ -8,6 +8,7 @@ const NewsList = ({ news }) => {
       {news.length === 0 && (
         <Text style={styles.noNewsText}>Não foram encontradas notícias</Text>
       )}
+      <ScrollView>
       {news?.map((item) => (
         <NewsItem
           key={item.title}
@@ -19,6 +20,7 @@ const NewsList = ({ news }) => {
           ogTitle={item.ogTitle}
         />
       ))}
+      </ScrollView>
     </View>
   );
 };

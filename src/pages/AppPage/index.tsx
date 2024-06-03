@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import AppBackground from "../../components/atoms/AppBackground";
 import SearchInput from "../../components/atoms/SearchInput";
 import BroadcastersList from "../../components/molecules/BroadcastersList";
@@ -20,18 +20,22 @@ const AppPage = () => {
 
   return (
     <AppBackground style={styles.container}>
+      <ScrollView>
       <View style={styles.innerPadding}>
+        
         <Text style={styles.title}>
           Selecione os principais véiculos de informação que você deseja
           acompanhar
         </Text>
 
         <SearchInput onSearchCompleted={handleSearch} />
+        
       </View>
 
       <BroadcastersList />
       
       <SelectedBroadcasterDragAndDrop />
+      </ScrollView>
     </AppBackground>
   );
 };
