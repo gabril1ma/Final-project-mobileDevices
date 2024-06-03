@@ -18,7 +18,7 @@ const SelectedBroadcasterDragAndDrop = () => {
       <View style={styles.buttonContainer}>
         {selectedBroadCasters.map((b) => (
           <TouchableOpacity style={styles.draggableItem} key={b.name}>
-            {b.name}
+            <Text>{b.name}</Text>
           </TouchableOpacity>
         ))}
       </View>

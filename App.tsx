@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { SafeAreaView, StyleSheet, Image } from 'react-native';
 import { globalStyles } from "./src/UI/globalStyles";

@@ -14,7 +14,6 @@ const NewsList = ({ news }) => {
           date={item.date}
           link={item.link}
           ogTitle={item.ogTitle}
-          broadcasterImages={item.broadcasterImages}
         />
       ))}
     </View>

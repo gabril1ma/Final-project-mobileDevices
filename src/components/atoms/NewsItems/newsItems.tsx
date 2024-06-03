@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 
-const NewsItem = ({ title, imageUrl, date, link, ogTitle, broadcaster, broadcasterImages }) => {
+const NewsItem = ({ title, imageUrl, date, link, ogTitle, broadcaster }) => {
   const handlePress = () => {
     Linking.openURL(link);
   };
 
   return (
     <View>
-      <Image source={{ uri: broadcasterImages }} style={styles.image} />
       <Text>{broadcaster}</Text>
     <TouchableOpacity onPress={handlePress} style={styles.container}>
       <Image source={{ uri: imageUrl }} style={styles.image} />

@@ -31,10 +31,6 @@ const AppPage = () => {
 
       <BroadcastersList />
       
-      
-
-      
-
       <SelectedBroadcasterDragAndDrop />
     </AppBackground>
   );
