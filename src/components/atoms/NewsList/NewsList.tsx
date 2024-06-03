@@ -5,9 +5,6 @@ import NewsItem from "../NewsItems/newsItems";
 const NewsList = ({ news }) => {
   return (
     <View style={styles.container}>
-      {news.length === 0 && (
-        <Text style={styles.noNewsText}>Não foram encontradas notícias</Text>
-      )}
       <ScrollView>
       {news?.map((item) => (
         <NewsItem
@@ -20,6 +17,9 @@ const NewsList = ({ news }) => {
           ogTitle={item.ogTitle}
         />
       ))}
+      {news.length === 0 && (
+        <Text style={styles.noNewsText}>Não foram encontradas notícias</Text>
+      )}
       </ScrollView>
     </View>
   );

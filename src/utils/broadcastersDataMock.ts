@@ -34,17 +34,17 @@ export const broadcastersDataMock: IBroadcasters[] = [
   {
     name: "Metrópoles",
     selected: false,
-    urlAPI: "www.metropoles.com/",
+    urlAPI: "www.metropoles.com",
   },
   {
     name: "IG",
     selected: false,
-    urlAPI: "www.ig.com.br/",
+    urlAPI: "www.ig.com.br",
   },
   {
     name: "Gazeta do Povo",
     selected: false,
-    urlAPI: "www.gazetadopovo.com.br/", 
+    urlAPI: "www.gazetadopovo.com.br", 
   },
   {
     name: "Estadão",

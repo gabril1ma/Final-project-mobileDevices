@@ -4,18 +4,17 @@ import NewsDTO from "../DTO/NewsDTO";
 import { IGoogleNewResponse } from "../types";
 import useAppContext from "./useAppContext";
 
-const getQuery = (value: string, domainsToInclude: string) =>
-  `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=a6fab64d720fc42f9&q=${value}&siteSearch=${domainsToInclude}&siteSearchFilter=i`;
+const getQuery = (value: string, domain: string) =>
+  `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=a6fab64d720fc42f9&q=${value}&siteSearch=${domain}&siteSearchFilter=i`;
 
 const useAppService = () => {
   const { appState, setAppState } = useAppContext();
 
-  const getDomainsToInclude = useCallback(
+  const getSelectedDomains = useCallback(
     () =>
       appState?.broadcasters
         .filter((broad) => broad?.selected)
-        .map((i) => i.urlAPI)
-        .toString(),
+        .map((i) => i.urlAPI),
     [appState?.broadcasters]
   );
 
@@ -26,31 +25,35 @@ const useAppService = () => {
 
   const fetchNews = useCallback(
     async (searchValue: string) => {
-      try {
-        const { data } = await axios.get(searchValue);
-        const googleNews: IGoogleNewResponse[] = data?.items ?? [];
+      const selectedDomains = getSelectedDomains();
+      let allNews = [];
 
-        setAppState((prev) => ({
-          ...prev,
-          news: googleNews.map((googleNew) => new NewsDTO(googleNew)),
-        }));
-      } catch (error) {
-        console.error("Erro ao buscar notícias:", error);
+      for (const domain of selectedDomains) {
+        try {
+          const { data } = await axios.get(getQuery(searchValue, domain));
+          const googleNews: IGoogleNewResponse[] = data?.items ?? [];
+          allNews = [...allNews, ...googleNews.map((googleNew) => new NewsDTO(googleNew))];
+        } catch (error) {
+          console.error(`Erro ao buscar notícias do domínio ${domain}:`, error);
+        }
       }
+
+      setAppState((prev) => ({
+        ...prev,
+        news: allNews,
+      }));
     },
-    [setAppState]
+    [setAppState, getSelectedDomains]
   );
 
   const dispatchfetchNews = useCallback(async () => {
-    await fetchNews(
-      getQuery(appState.searchInputValue, getDomainsToInclude() ?? "")
-    );
-  }, [appState?.searchInputValue, fetchNews, getDomainsToInclude]);
+    await fetchNews(appState.searchInputValue);
+  }, [appState?.searchInputValue, fetchNews]);
 
   const dispatchSearchNews = useCallback(async () => {
     try {
       setAppState((prev) => ({ ...prev, isLoading: true }));
-      dispatchfetchNews();
+      await dispatchfetchNews();
     } catch (error) {
       console.log("🚀 ~ error:", error);
     } finally {
