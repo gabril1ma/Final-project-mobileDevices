@@ -20,5 +20,10 @@ export const broadcastersDataMock: IBroadcasters[] = [
     name: "Globo news",
     selected: false,
     urlAPI: "g1.globo.com",
-  }
+  },
+  {
+    name: "Revista veja",
+    selected: false,
+    urlAPI: "veja.abril.com.br",
+  },
 ];

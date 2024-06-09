@@ -1,46 +1,41 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, Linking } from 'react-native';
+import React from "react";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const NewsItem = ({ title, imageUrl, date, link, ogTitle, broadcaster }) => {
-  const handlePress = () => {
-    Linking.openURL(link);
-  };
-
+const NewsItem = ({ imageUrl, link, ogTitle, broadcaster }) => {
   return (
-    <View>
-      <Text>{broadcaster}</Text>
-    <TouchableOpacity onPress={handlePress} style={styles.container}>
-      <Image source={{ uri: imageUrl }} style={styles.image} />
-      <View>
-        <Text style={styles.title}>{ogTitle}</Text>
-        <Text style={styles.date}>{date}</Text>
-      </View>
-    </TouchableOpacity>
-    </View>
+    <a href={link} style={styles.link}>
+      <TouchableOpacity style={styles.container}>
+        <Image source={{ uri: imageUrl }} style={styles.image} />
+
+        <View>
+          <Text>{broadcaster}</Text>
+          <Text style={styles.title}>{ogTitle}</Text>
+        </View>
+      </TouchableOpacity>
+    </a>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     padding: 10,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: "transparent",
   },
   image: {
-    width: 50,
     height: 50,
-    borderRadius: 25,
+    borderRadius: 4,
     marginRight: 10,
+    aspectRatio: 70 / 50,
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-  date: {
-    fontSize: 12,
-    color: '#555',
+  link: {
+    textDecorationLine: "none",
   },
 });
 

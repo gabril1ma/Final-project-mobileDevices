@@ -20,9 +20,6 @@ export interface INews {
   htmlTitle: string;
   link: string;
   title: string;
-  image: string;
-  snippet: string;
-  date: string;
 }
 
 export interface IGoogleNewResponse {
@@ -43,34 +40,34 @@ export interface IGoogleNewResponse {
         height: string;
       }
     ];
-    metatags: [
-      {
-        "og:image": string;
-        "og:type": string;
-        "twitter:card": string;
-        "twitter:title": string;
-        "og:site_name": string;
-        author: string;
-        "og:title": string;
-        "twitter:label1": string;
-        "twitter:label2": string;
-        "og:description": string;
-        "twitter:creator": string;
-        "article:publisher": string;
-        "twitter:image": string;
-        "twitter:data1": string;
-        "twitter:data2": string;
-        "twitter:site": string;
-        viewport: string;
-        "twitter:description": string;
-        "og:locale": string;
-        "og:url": string;
-      }
-    ];
+    metatags: IGoogleNewResponseMetatag[];
     cse_image: [
       {
         src: string;
       }
     ];
   };
+}
+
+export interface IGoogleNewResponseMetatag {
+  og_image: string;
+  og_type: string;
+  twitter_card: string;
+  twitter_title: string;
+  og_site_name: string;
+  author: string;
+  og_title: string;
+  twitter_label1: string;
+  twitter_label2: string;
+  og_description: string;
+  twitter_creator: string;
+  article_publisher: string;
+  twitter_image: string;
+  twitter_data1: string;
+  twitter_data2: string;
+  twitter_site: string;
+  viewport: string;
+  twitter_description: string;
+  og_locale: string;
+  og_url: string;
 }
