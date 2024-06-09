@@ -5,7 +5,7 @@ import { IGoogleNewResponse } from "../types";
 import useAppContext from "./useAppContext";
 
 const getQuery = (value: string, domains: string) =>
-  `https://customsearch.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=a6fab64d720fc42f9&q=${value}&siteSearch=${domains}&siteSearchFilter=i&sort=date`;
+  `https://customsearch.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=a6fab64d720fc42f9&q=${value}&siteSearch=${domains}&siteSearchFilter=i`;
 
 const useAppService = () => {
   const { appState, setAppState } = useAppContext();

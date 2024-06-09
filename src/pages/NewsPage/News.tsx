@@ -19,7 +19,7 @@ const ResultsPage = () => {
     <ScrollView>
       <View style={{ flex: 1, padding: 20 }}>
         <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>
-          Resultados da pesquisa {appState.searchInputValue}
+          Resultados da pesquisa: {appState.searchInputValue}
         </Text>
 
         {appState.isLoading ? (
